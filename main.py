@@ -1,5 +1,8 @@
+import sys
 from stats import *
-file = "books/frankenstein.txt"
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+file = sys.argv[1]
 def get_book_text(filepath):
     with open(filepath) as f:
         text = f.read()
